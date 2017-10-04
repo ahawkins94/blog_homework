@@ -1,7 +1,9 @@
+<a href="/posts"><button>HOME PAGE</button></a>
 <h1>Post:</h1>
 
 
 <%= render @post %>
+<%= link_to "Destroy", @post, method: :delete, data: { confirm: "Are you sure?" } %>
 
 <h3>Comments:</h3>
 

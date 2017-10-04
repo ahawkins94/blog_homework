@@ -25,9 +25,17 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update(post_params)
+
+    redirect_to post
   end
 
   def destroy
+    Post.destroy(params[:id])
+    redirect_to posts_url
+  end
 
+  protected
+  def post_params
+    params.require(:post).permit(:title, :body)
   end
 end
