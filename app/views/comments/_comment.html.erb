@@ -5,6 +5,8 @@
 
 <p>
 <%= link_to "Edit", edit_post_comment_path(@post, comment) if controller_name == "posts"%>
+
+<%= link_to "Delete", post_comment_path(@post, comments), method: :delete, data: { confirm: "Are you sure?????" } if controller_name == "songs" %>
 	
 </p>
 <br>
