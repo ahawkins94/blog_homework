@@ -1,2 +1,7 @@
-<h1>Comments#show</h1>
-<p>Find me in app/views/comments/show.html.erb</p>
+<h1>Comments Show Page</h1>
+
+<%= comment.body %>
+
+<%= link_to "Show Page", post_comment_path(@post, comment) unless controller_name = "comments" %>
+
+<%= link_to "Edit", edit_post_comment_path(@post, comment) if controller_name == "comments"%>

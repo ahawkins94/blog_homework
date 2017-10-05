@@ -1,7 +1,11 @@
 <p> <%= comment.body %> 
 
-	<%= link_to "Edit", edit_post_comment_path(@post, comment) if controller_name == "comments"%>
 </p>
 <p> <%= comment.username %></p>
+
+<p>
+<%= link_to "Edit", edit_post_comment_path(@post, comment) if controller_name == "posts"%>
+	
+</p>
 <br>
    
